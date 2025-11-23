@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: en-US }}">
+
+<head>
+    <title>{{ site.title }} | {{site.affiliation}}</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    {% if site.keywords %}
+    <meta name="keywords" content="{{ site.keywords }}">
+    {% endif %}
+    {% if site.canonical %}
+    <link rel="canonical" href="{{ site.canonical }}" />
+    {% endif %}
+
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
+    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
+    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
+
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
+        integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% if site.font == "Sans Serif" %}
+    <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
+    {% else %}
+    <link rel="stylesheet" href="./assets/css/font.css">
+    {% endif %}
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/publications.css">
+    </head>
+
+    <body>
+    <!-- 特效页 -->
+        <!-- 特效页 -->
+    <div id="intro-page" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #F9F8F4;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #8C0000;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        transition: opacity 0.3s ease;
+    ">
+        <!-- 固定文字 -->
+        <p style="
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #8C0000;
+            font-weight: bold;
+            text-align: center;
+        ">Welcome to {{ site.title }}'s Webpage</p>
+
+        <div style="font-size: 24px; font-family: 'Courier New', Courier, monospace;">
+            <span id="typewriter"></span><span class="cursor">|</span>
+        </div>
+
+        <!-- 提示文字 -->
+        <p style="
+            font-size: 1rem;
+            color: #8C0000;
+            margin-top: 40px;
+            opacity: 0.7;
+            animation: pulse 2s infinite;
+        ">click to continue</p>
+
+        <style>
+            @keyframes pulse {
+                0% { opacity: 0.4; }
+                50% { opacity: 1; }
+                100% { opacity: 0.4; }
+            }
+        </style>
+    </div>
+
+    <!-- 主页面内容 -->
+    <div id="main-content" style="
+        display: none;
+        opacity: 0; /* 初始完全不可见 */
+        transition: opacity 1s ease; /* 淡入动画 */
+    ">
+        <div class="wrapper">
+        <header>
+        {% if site.avatar %}
+        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        {% endif %}
+
+        <h1>{{ site.title }}</h1>
+
+        {% if site.position %}
+        <position style="font-size:1.10rem;">{{ site.position }}</position>
+        <br>
+        {% endif %}
+        {% if site.affiliation %}
+        <a href="{{ site.affiliation_link }}" rel="noopener">
+            <autocolor>{{ site.affiliation }}</autocolor>
+        </a>
+        <br>
+        {% endif %}
+        {% if site.email %}
+        <email>{{ site.email }}</email>
+        {% endif %}
+
+        <br><br>
+        <div class="social-icons">
+            {% for social in site.social %}
+            <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" title="{{ social.platform }}">
+                <i class="{{ social.icon }}" style="font-size: {{ social.font_size | default: '1.2rem' }};"></i>
+            </a>
+            {% endfor %}
+        </div>
+        <br>
+
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#miscellaneous">Misc</a></li>
+        </ul>
+
+        </header>
+        <section>
+        {{ content }}
+        <br>
+        {% if site.enable_footnote %}
+        <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank"
+            rel="noopener">Minimal Light</a> theme.</small></p>
+        {% endif %}
+        </section>
+        <footer></footer>
+    </div>
+</div>
+
+    <script src="./assets/js/scale.fix.js"></script>
+    <script src="./assets/js/favicon-switcher.js"></script>
+    <script src="./assets/js/intro-animation.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    <a id="back-to-top"></a>
+    <script src="./assets/js/back-to-top.js"></script>
+    <script src="./assets/js/pub-filter.js"></script>
+</body>
+
+</html>

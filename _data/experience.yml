@@ -1,0 +1,11 @@
+main:
+  - title: "University Name"
+    details: "(2022.09-Present) B.S in Computer Science"
+    image: ./assets/img/favicon.ico
+    image_width: 40px
+    image_height: 40px
+  - title: "Lab Name"
+    details: "(2024.01-Present) Undergraduate Research Assistant"
+    image: ./assets/img/favicon.ico
+    image_width: 80px
+    image_height: 40px

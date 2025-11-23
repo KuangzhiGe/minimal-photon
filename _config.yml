@@ -1,0 +1,81 @@
+# Basic Information
+title: Your Name
+position: Your Position
+affiliation: Your Affiliation
+affiliation_link: https://www.example.com
+email: your_email (at) example.com
+
+domain: yourdomain.com # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://yourdomain.com # the base hostname and protocol for your site, e.g. http://example.com
+plugins:
+  - jekyll-sitemap
+# baseurl: /REPOSITORY-NAME/      # place folder name if the site is served in a subfolder
+
+# Search Engine Optimization (SEO)
+# The following information is used to improve the website traffic from search engines, e.g., Google.
+keywords: Your Name, Your Affiliation, Research Area
+description: The personal website of Your Name.
+canonical: https://yourdomain.com/
+
+# Analytics
+# google_analytics: UA-XXXXXXXX-X
+
+# Links
+# If you don't need one of them, you may delete the corresponding line.
+social:
+  - {
+      platform: "GitHub",
+      url: "https://github.com/yourusername",
+      icon: "fab fa-github",
+      font_size: "1.2rem",
+    }
+  - {
+      platform: "Google Scholar",
+      url: "https://scholar.google.com/citations?user=your_id",
+      icon: "ai ai-google-scholar",
+      font_size: "1.3rem",
+    }
+  - {
+      platform: "LinkedIn",
+      url: "https://www.linkedin.com/in/yourusername/",
+      icon: "fab fa-linkedin",
+      font_size: "1.2rem",
+    }
+  # - { platform: 'CV',           url: 'assets/files/curriculum_vitae.pdf',              icon: 'ai ai-cv',             font_size: '1.3rem' }
+  # - { platform: 'Twitter',      url: 'https://twitter.com/your_username',              icon: 'fab fa-x-twitter',     font_size: '1.2rem' }
+
+# Images (e.g., your profile picture and your website's favicon)
+# "favicon" and "favicon_dark" are used for the light and dark modes, respectively.
+avatar: ./assets/img/favicon.ico # Replace with your profile picture
+favicon: ./assets/img/favicon.ico
+favicon_dark: ./assets/img/favicon.ico
+
+# Footnote
+# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
+enable_footnote: true
+
+# Auto Dark Mode
+# You may use the option to disable the automatic dark theme
+auto_dark_mode: true
+
+# Font
+# You can use this option to choose between Serif or Sans Serif fonts.
+font: "Sans Serif" # or "Sans Serif"
+
+# Google Analytics ID
+# Please remove this if you don't use Google Analytics
+# google_analytics: UA-111540567-4
+
+# Use this project as a remote theme for GitHub Pages
+# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+remote_theme: yaoyao-liu/minimal-light
+
+# The following files will be removed from the generated website.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - README_zh_Hans.md
+  - README_zh_Hant.md
+  - README_de.md
+  - LICENSE
