@@ -3,9 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red.svg)](https://jekyllrb.com/)
 
-**Minimal Photon** is a clean, elegant, and responsive academic homepage template designed for researchers, professors, and students. It is built on top of the [Minimal Light](https://github.com/yaoyao-liu/minimal-light) theme, featuring a **minimalist Apple-inspired design**, enhanced data management, automated publication updates from BibTeX, and a stylish typewriter intro animation.
+**Minimal Photon** is a clean, elegant, and responsive academic homepage template designed for researchers, professors, and students. It is built on top of the [Minimal Light](https://github.com/yaoyao-liu/minimal-light) theme, featuring a **minimalist Apple-inspired design**, enhanced data management, automated publication updates from BibTeX, and a stylish typewriter intro animation. Check out my [homepage](https://kuangzhige.github.io/) for a live demo.
 
-[**🇨🇳 中文说明 (Chinese README)**](./README_zh_Hans.md)
+[**中文说明 (Chinese README)**](./README_zh_Hans.md)
 
 ---
 
@@ -62,7 +62,7 @@ You can use this template by hosting it on **GitHub Pages** (recommended) or run
     - Go to your repository's **Settings** > **Pages**.
     - Under **Source**, select `main` branch (or `master`) and `/ (root)` folder.
     - Click **Save**.
-    - Your site will be live at `https://your-username.github.io` (or `https://your-username.github.io/repository-name`).
+    - Your site will be live at `https://your-username.github.io`.
 
 3.  **Customize**
     - Clone your forked repository to your local machine.
@@ -73,7 +73,7 @@ You can use this template by hosting it on **GitHub Pages** (recommended) or run
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/yourusername/minimal-photon.git
+    git clone https://github.com/KuangzhiGe/minimal-photon.git
     cd minimal-photon
     ```
 

@@ -3,9 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red.svg)](https://jekyllrb.com/)
 
-**Minimal Photon** 是一个简洁、优雅且响应式的学术主页模板，专为研究人员、教授和学生设计。它基于 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 主题构建，采用了**极简主义的苹果风格设计**，增强了数据管理功能，支持从 BibTeX 自动更新出版物，并包含时尚的打字机开场动画。
+**Minimal Photon** 是一个简洁、优雅且响应式的学术主页模板，专为研究人员、教授和学生设计。它基于 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 主题构建，采用了**极简主义的苹果风格设计**，增强了数据管理功能，支持从 BibTeX 自动更新出版物，并包含时尚的打字机开场动画。你可以访问我[个人主页](https://kuangzhige.github.io/)查看效果。
 
-[**🇺🇸 English README**](./README.md)
+[**English README**](./README.md)
 
 ---
 
@@ -62,7 +62,7 @@
     - 进入仓库的 **Settings** > **Pages**。
     - 在 **Source** 下，选择 `main` 分支（或 `master`）和 `/ (root)` 文件夹。
     - 点击 **Save**。
-    - 你的网站将在 `https://your-username.github.io`（或 `https://your-username.github.io/repository-name`）上线。
+    - 你的网站将在 `https://your-username.github.io`上线。
 
 3.  **自定义**
     - 将 Fork 后的仓库克隆到本地。
@@ -73,7 +73,7 @@
 
 1.  **克隆仓库**
     ```bash
-    git clone https://github.com/yourusername/minimal-photon.git
+    git clone https://github.com/KuangzhiGe/minimal-photon.git
     cd minimal-photon
     ```
 
