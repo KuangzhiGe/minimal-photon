@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red.svg)](https://jekyllrb.com/)
 
-**Minimal Photon** is a clean, elegant, and responsive academic homepage template designed for researchers, professors, and students. It is built on top of the [Minimal Light](https://github.com/yaoyao-liu/minimal-light) theme, featuring enhanced data management, automated publication updates from BibTeX, and a stylish typewriter intro animation.
+**Minimal Photon** is a clean, elegant, and responsive academic homepage template designed for researchers, professors, and students. It is built on top of the [Minimal Light](https://github.com/yaoyao-liu/minimal-light) theme, featuring a **minimalist Apple-inspired design**, enhanced data management, automated publication updates from BibTeX, and a stylish typewriter intro animation.
 
 [**🇨🇳 中文说明 (Chinese README)**](./README_zh_Hans.md)
 
@@ -11,6 +11,7 @@
 
 ## ✨ Features
 
+- **🍎 Apple-style Aesthetic**: Clean lines, subtle shadows, and a focus on typography, inspired by Apple's design language.
 - **📖 Clean & Academic**: Optimized for presenting research, publications, and portfolios.
 - **📱 Fully Responsive**: Perfectly adapts to desktops, tablets, and mobile devices.
 - **⚙️ Easy Configuration**: Centralized settings in `_config.yml`.
@@ -47,27 +48,47 @@ Understanding the folder structure will help you customize the theme effectively
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
-### 1. Fork & Clone
-Fork this repository to your GitHub account and clone it locally:
-```bash
-git clone https://github.com/yourusername/minimal-photon.git
-cd minimal-photon
-```
+You can use this template by hosting it on **GitHub Pages** (recommended) or running it locally.
 
-### 2. Install Dependencies
-Ensure you have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [Bundler](https://bundler.io/) installed.
-```bash
-bundle install
-```
+### Option 1: Deploy to GitHub Pages (Recommended)
 
-### 3. Run Locally
-Start the local server to preview your site:
-```bash
-bundle exec jekyll serve
-```
-Visit `http://localhost:4000` in your browser.
+1.  **Fork this Repository**
+    - Click the **Fork** button at the top right of this page.
+    - Rename the repository to `your-username.github.io` (for a main user site) or keep it as is (for a project site).
+
+2.  **Enable GitHub Pages**
+    - Go to your repository's **Settings** > **Pages**.
+    - Under **Source**, select `main` branch (or `master`) and `/ (root)` folder.
+    - Click **Save**.
+    - Your site will be live at `https://your-username.github.io` (or `https://your-username.github.io/repository-name`).
+
+3.  **Customize**
+    - Clone your forked repository to your local machine.
+    - Follow the [Configuration](#-configuration) section below to personalize your site.
+    - Push your changes to GitHub, and the site will update automatically.
+
+### Option 2: Run Locally
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/yourusername/minimal-photon.git
+    cd minimal-photon
+    ```
+
+2.  **Install Dependencies**
+    Ensure you have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [Bundler](https://bundler.io/) installed.
+    ```bash
+    bundle install
+    ```
+
+3.  **Run Server**
+    Start the local server to preview your site:
+    ```bash
+    bundle exec jekyll serve
+    ```
+    Visit `http://localhost:4000` in your browser.
 
 ---
 
@@ -127,17 +148,6 @@ Directly edit `_data/publications.yml` following the existing format.
 - **Intro Animation**: Modify the typing text in `assets/js/intro-animation.js`.
 - **Visitor Map**: To add a visitor map (e.g., ClustrMaps), edit `index.md` and replace the placeholder comment at the bottom with your script code.
 - **Styles**: Custom CSS can be added to `assets/css/style.scss`.
-
----
-
-## 📦 Deployment
-
-This theme is ready for **GitHub Pages**.
-
-1.  Push your changes to GitHub.
-2.  Go to **Settings** > **Pages**.
-3.  Under **Source**, select `main` branch (or `master`).
-4.  Your site will be live at `https://yourusername.github.io/minimal-photon/`.
 
 ---
 
