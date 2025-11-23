@@ -145,6 +145,7 @@
     <script src="./assets/js/scale.fix.js"></script>
     <script src="./assets/js/favicon-switcher.js"></script>
     <script src="./assets/js/intro-animation.js"></script>
+    {% if site.google_analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -152,6 +153,7 @@
         gtag('js', new Date());
         gtag('config', '{{ site.google_analytics }}');
     </script>
+    {% endif %}
     <a id="back-to-top"></a>
     <script src="./assets/js/back-to-top.js"></script>
     <script src="./assets/js/pub-filter.js"></script>

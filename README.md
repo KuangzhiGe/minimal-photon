@@ -25,11 +25,13 @@ Edit `_config.yml` to update your personal information:
 - **SEO**: Keywords, description.
 - **Social Links**: GitHub, Google Scholar, LinkedIn, etc.
 - **Images**: Update `avatar` and `favicon` paths.
+- **Analytics**: (Optional) Uncomment `google_analytics` and add your ID.
 
 ### 3. Content
 
 #### Homepage (`index.md`)
 Edit `index.md` to update your "About Me", "Research Interests", and "Miscellaneous" sections.
+You can also add a visitor map (e.g., ClustrMaps) at the bottom of `index.md` by replacing the commented-out block.
 
 #### Experience (`_data/experience.yml`)
 Add your education and work experience.

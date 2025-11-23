@@ -25,11 +25,13 @@ Fork 本仓库并将其克隆到你的本地机器。
 - **SEO**：关键词、描述。
 - **社交链接**：GitHub、Google Scholar、LinkedIn 等。
 - **图片**：更新 `avatar`（头像）和 `favicon`（图标）路径。
+- **分析**：（可选）取消注释 `google_analytics` 并添加你的 ID。
 
 ### 3. 内容
 
 #### 主页 (`index.md`)
 编辑 `index.md` 以更新你的“关于我”、“研究兴趣”和“杂项”部分。
+你也可以在 `index.md` 底部通过替换注释掉的代码块来添加访客地图（例如 ClustrMaps）。
 
 #### 经历 (`_data/experience.yml`)
 添加你的教育和工作经历。

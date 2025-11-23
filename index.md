@@ -49,7 +49,11 @@ My current research interests primarily lie in **Topic 1** and **Topic 2**, with
 </div>
 
 <div style="width: 100px; height: 100px; margin: 30px auto; display: flex; justify-content: center; align-items: center;">
-    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=WBS-C103szyqK9_Q1B6O3HihyzClmC4RQve17y7ef-U"></script>
+    <!-- 
+    Optional: Add your ClustrMaps or other visitor tracker here. 
+    Example:
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=YOUR_ID"></script>
+    -->
 </div>
 
 <!-- {% include_relative _includes/services.md %} -->
