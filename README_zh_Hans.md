@@ -1,102 +1,150 @@
 # Minimal Photon 主题
 
-一个简洁、优雅且响应式的学术主页模板，适合研究人员和学生使用。基于 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 主题开发。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red.svg)](https://jekyllrb.com/)
 
-## 特性
+**Minimal Photon** 是一个简洁、优雅且响应式的学术主页模板，专为研究人员、教授和学生设计。它基于 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 主题构建，增强了数据管理功能，支持从 BibTeX 自动更新出版物，并包含时尚的打字机开场动画。
 
-- **简洁设计**：极简主义美学，非常适合学术展示。
-- **响应式**：在桌面和移动设备上都能完美显示。
-- **易于配置**：大多数设置都在 `_config.yml` 中。
-- **数据驱动**：通过 YAML 文件管理出版物、新闻和经历。
-- **开场动画**：时尚的打字机开场动画。
-- **出版物筛选**：（可选）按标签筛选出版物。
+[**🇺🇸 English README**](./README.md)
 
-## 快速开始
+---
+
+## ✨ 特性
+
+- **📖 简洁学术风**：专为展示研究成果、出版物和个人简介而优化。
+- **📱 完全响应式**：完美适配桌面、平板和移动设备。
+- **⚙️ 轻松配置**：所有核心设置集中在 `_config.yml` 中。
+- **🗂️ 数据驱动**：通过简单的 YAML 文件管理内容（新闻、经历、出版物）。
+- **🤖 自动化流程**：使用 Python 脚本从 BibTeX 自动生成出版物列表。
+- **✨ 交互体验**：包含时尚的打字机开场动画和出版物筛选功能。
+- **📈 分析与 SEO**：内置 Google Analytics 支持和 SEO 优化。
+
+---
+
+## 📂 项目结构
+
+了解文件夹结构有助于你更高效地自定义主题。
+
+```text
+.
+├── _config.yml              # ⚙️ 主配置文件（个人信息、SEO、链接）
+├── index.md                 # 🏠 主页内容（关于我、研究兴趣）
+├── _data/                   # 🗃️ 动态内容的数据文件
+│   ├── experience.yml       #    - 工作和教育经历
+│   ├── news.yml             #    - 最新新闻
+│   ├── publications.yml     #    - 出版物列表（可自动生成）
+│   └── references.bib       #    - 出版物的 BibTeX 源文件
+├── _includes/               # 🧩 可复用的 HTML 组件（新闻、出版物、经历）
+├── _layouts/                # 📐 页面模板
+├── assets/                  # 🎨 静态资源
+│   ├── css/                 #    - 样式表
+│   ├── img/                 #    - 图片（头像、图标、论文缩略图）
+│   ├── js/                  #    - JavaScript 文件（动画、筛选器）
+│   └── bibs/                #    - 单独的 BibTeX 文件（自动生成）
+└── scripts/                 # 🛠️ 实用脚本
+    └── update_pubs.py       #    - 将 BibTeX 转换为 YAML 的脚本
+```
+
+---
+
+## 🚀 快速开始
 
 ### 1. Fork 和 Clone
-
-Fork 本仓库并将其克隆到你的本地机器。
-
-### 2. 配置
-
-编辑 `_config.yml` 以更新你的个人信息：
-
-- **基本信息**：姓名、职位、所属机构、邮箱。
-- **SEO**：关键词、描述。
-- **社交链接**：GitHub、Google Scholar、LinkedIn 等。
-- **图片**：更新 `avatar`（头像）和 `favicon`（图标）路径。
-- **分析**：（可选）取消注释 `google_analytics` 并添加你的 ID。
-
-### 3. 内容
-
-#### 主页 (`index.md`)
-编辑 `index.md` 以更新你的“关于我”、“研究兴趣”和“杂项”部分。
-你也可以在 `index.md` 底部通过替换注释掉的代码块来添加访客地图（例如 ClustrMaps）。
-
-#### 经历 (`_data/experience.yml`)
-添加你的教育和工作经历。
-
-```yaml
-- title: "大学名称"
-  details: "(2022.09-至今) 计算机科学学士"
-  image: ./assets/img/logo.png
-  image_width: 40px
-  image_height: 40px
+将此仓库 Fork 到你的 GitHub 账号并克隆到本地：
+```bash
+git clone https://github.com/yourusername/minimal-photon.git
+cd minimal-photon
 ```
 
-#### 新闻 (`_data/news.yml`)
-添加你的最新新闻。
+### 2. 安装依赖
+确保你已安装 [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 和 [Bundler](https://bundler.io/)。
+```bash
+bundle install
+```
 
+### 3. 本地运行
+启动本地服务器以预览你的网站：
+```bash
+bundle exec jekyll serve
+```
+在浏览器中访问 `http://localhost:4000`。
+
+---
+
+## 🛠️ 配置指南
+
+大多数全局设置位于 `_config.yml` 中。打开它并更新以下内容：
+
+- **基本信息**：`title`（姓名）、`position`（职位）、`affiliation`（机构）、`email`（邮箱）。
+- **URL 设置**：`url`（你的域名）、`baseurl`（如果不使用自定义域名，则为仓库名称）。
+- **SEO**：`keywords`（关键词）、`description`（描述）。
+- **社交链接**：更新 GitHub、Google Scholar、LinkedIn 等链接。
+- **图片**：设置 `avatar`（头像）和 `favicon`（网站图标）的路径。
+- **分析**：取消注释 `google_analytics` 并添加你的 Measurement ID（例如 `G-XXXXXXXXXX`）以启用追踪。
+
+---
+
+## 📝 内容管理
+
+### 1. 主页 (`index.md`)
+编辑 `index.md` 以更新 **关于我 (About Me)**、**研究兴趣 (Research Interests)** 和 **杂项 (Miscellaneous)** 部分。完全支持 Markdown 语法。
+
+### 2. 新闻 (`_data/news.yml`)
+在这里添加你的最新动态。
 ```yaml
 - date: 2024年12月
-  content: 📃 论文被 CVPR 接收！
+  content: 📃 论文被 CVPR 2025 接收！
 ```
 
-#### 出版物 (`_data/publications.yml`)
-你可以通过两种方式管理你的出版物：
-
-**选项 1：手动编辑（简单）**
-直接编辑 `_data/publications.yml`。
-
+### 3. 经历 (`_data/experience.yml`)
+列出你的教育和工作经历。
 ```yaml
-- title: "论文标题"
-  authors: "<strong>你的名字</strong>, 合著者"
-  url: "pdf链接"
-  code: "代码链接"
-  page: "项目主页链接"
-  image: "./assets/img/pub/image.png"
-  notes: "会议名称"
-  tags: "标签1, 标签2"
+main:
+  - title: "大学名称"
+    details: "(2022 - 至今) 博士生"
+    image: ./assets/img/logo.png
 ```
 
-**选项 2：使用 BibTeX（高级）**
-1. 将你的 BibTeX 条目添加到 `_data/references.bib`。
-   - 支持的字段：`title`, `author`, `url`, `code`, `page`, `image`, `notes`, `tags`。
-2. 编辑 `scripts/update_pubs.py` 并将 `MY_NAME` 更新为你的名字（用于自动加粗）。
-3. 运行脚本：
-   ```bash
-   python3 scripts/update_pubs.py
-   ```
-   这将自动生成 `_data/publications.yml` 和 `assets/bibs/` 中的单独 BibTeX 文件。
+### 4. 出版物 (`_data/publications.yml`)
+你有两种方式管理出版物：
 
-### 4. 自定义
+#### **选项 A：自动化（推荐）**
+1.  将你的 BibTeX 条目粘贴到 `_data/references.bib` 中。
+2.  打开 `scripts/update_pubs.py` 并将 `MY_NAME` 设置为你的名字（这将在作者列表中加粗显示你的名字）。
+3.  运行脚本：
+    ```bash
+    python3 scripts/update_pubs.py
+    ```
+    这将自动更新 `_data/publications.yml` 并在 `assets/bibs/` 中生成单独的 `.bib` 文件。
 
-- **开场动画**：编辑 `assets/js/intro-animation.js` 以更改打字文本。
-- **出版物筛选**：取消注释 `_includes/publications.md` 中的筛选部分，并更新按钮以匹配你的标签。
+#### **选项 B：手动**
+直接按照现有格式编辑 `_data/publications.yml`。
 
-### 5. 部署
+---
 
-本主题设计用于在 GitHub Pages 上托管。
+## 🎨 高级自定义
 
-1. 转到 GitHub 上的仓库设置。
-2. 导航到 "Pages"。
-3. 选择 `main` 分支作为源。
-4. 你的网站将在 `https://yourusername.github.io/repository-name/` 上线。
+- **开场动画**：修改 `assets/js/intro-animation.js` 中的打字文本。
+- **访客地图**：要添加访客地图（如 ClustrMaps），请编辑 `index.md` 并将底部的占位符注释替换为你的脚本代码。
+- **样式**：自定义 CSS 可以添加到 `assets/css/style.scss` 中。
 
-## 许可证
+---
+
+## 📦 部署
+
+本主题已准备好部署到 **GitHub Pages**。
+
+1.  将你的更改推送到 GitHub。
+2.  进入 **Settings** > **Pages**。
+3.  在 **Source** 下，选择 `main` 分支（或 `master`）。
+4.  你的网站将在 `https://yourusername.github.io/minimal-photon/` 上线。
+
+---
+
+## 📄 许可证
 
 本项目采用 MIT 许可证。
 
-## 致谢
+## 🙏 致谢
 
-本主题基于 [Minimal Light](https://github.com/yaoyao-liu/minimal-light)。
+基于 [Yaoyao Liu](https://github.com/yaoyao-liu) 的 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 主题。

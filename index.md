@@ -49,8 +49,8 @@ My current research interests primarily lie in **Topic 1** and **Topic 2**, with
 </div>
 
 <div style="width: 100px; height: 100px; margin: 30px auto; display: flex; justify-content: center; align-items: center;">
-    <!-- 
-    Optional: Add your ClustrMaps or other visitor tracker here. 
+    <!--
+    Optional: Add your ClustrMaps or other visitor tracker here.
     Example:
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=YOUR_ID"></script>
     -->
