@@ -1,7 +1,9 @@
 # Minimal Photon 主题
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-red.svg)](https://jekyllrb.com/)
+
 ![alt text](assets/img/minimal-photon-demo.gif)
+
 **Minimal Photon** 是一个简洁、优雅且响应式的学术主页模板，专为研究人员、教授和学生设计。它基于 [Minimal Light](https://github.com/yaoyao-liu/minimal-light) 主题构建，采用了**极简主义的苹果风格设计**，增强了数据管理功能，支持从 BibTeX 自动更新出版物，并包含时尚的打字机开场动画。你可以访问我[个人主页](https://kuangzhige.github.io/)查看效果。
 
 [**English README**](./README.md)
