@@ -1,608 +1,492 @@
+/* =========================================
+   Base Styles & Desktop Layout
+   ========================================= */
+
 .pub-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .bibliography {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .bibliography li {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .bibliography li:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .news-ticker-container {
-  background: #f5f5f7;
-  border-radius: 12px;
-  padding: 16px;
-  max-height: 300px;
-  overflow-y: auto;
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 16px;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .news-ticker {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .news-ticker li {
-  margin-bottom: 12px;
-  font-size: 14px;
-  line-height: 1.5;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .news-ticker li strong {
-  color: #8C0000;
-  margin-right: 8px;
+    color: #8C0000;
+    margin-right: 8px;
 }
 
-.social-icons a{
-  display:inline-block;
-  height:2.4rem;
-  width:2.4rem;
-  background-color:transparent;
-  color:#8C0000!important;
-  border-radius:100%;
-  text-align:center;
-  font-size:1.15rem;
-  line-height:2.5rem;
-  margin-right:1rem}
+.social-icons a {
+    display: inline-block;
+    height: 2.4rem;
+    width: 2.4rem;
+    background-color: transparent;
+    color: #8C0000 !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 2.5rem;
+    margin-right: 1rem;
+}
 
-/* Dark mode removed */
+.social-icons a:last-child {
+    margin-right: 0;
+}
 
-.social-icons a:last-child{margin-right:0}.social-icons a:hover{background-color:white;
-    color:black;
-    transform: scale(1.2)}
-    /*
-    .social-icons a:after {
-        content: '';
-        display: block;
-        margin: 0px;
-        height: 1px;
-        width: 0px;
-        background: transparent;
-        transition: width .5s ease, background-color .5s ease;
-      }
-      .social-icons a:hover:after {
-        width: 100%;
-        background: #337ab7;
-      }
-     */
+.social-icons a:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+}
 
-/* Dark mode removed */
+.icon-button {
+    background-color: white;
+    border-radius: 3.6rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2.0rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 3.6rem;
+}
 
-.icon-button{
-  background-color:white;
-  border-radius:3.6rem;
-  cursor:pointer;
-  display:inline-block;
-  font-size:2.0rem;
-  height:3.6rem;
-  line-height:3.6rem;
-  margin:0 5px;
-  position:relative;
-  text-align:center;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;width:3.6rem}
+.icon-button span {
+    border-radius: 0;
+    display: block;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transition: all 0.3s;
+    width: 0;
+}
 
-.icon-button span{
-  border-radius:0;
-  display:block;
-  height:0;
-  left:50%;
-  margin:0;
-  position:absolute;
-  top:50%;
-  -webkit-transition:all 0.3s;
-  -moz-transition:all 0.3s;
-  -o-transition:all 0.3s;
-  transition:all 0.3s;
-  width:0}
+.icon-button:hover span {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 3.6rem;
+    margin: -1.8rem;
+}
 
-.icon-button:hover span{
-  width:3.6rem;
-  height:3.6rem;
-  border-radius:3.6rem;
-  margin:-1.8rem}
+.twitter span {
+    background-color: #4099ff;
+}
 
-.twitter span{
-  background-color:#4099ff}
+.facebook span {
+    background-color: #4286f4;
+}
 
-.facebook span{
-  background-color:#4286f4}
+.linkedin span {
+    background-color: #0077B5;
+}
 
-.linkedin span{
-  background-color:#0077B5}
-
-.github span{
-  background-color:#000}
+.github span {
+    background-color: #000;
+}
 
 email {
     font-size: 14px;
-    font-family: "Ubuntu Mono";
+    font-family: "Ubuntu Mono", monospace;
 }
 
-.icon-button i{
-  background:none;
-  color:white;
-  height:3.6rem;
-  left:0;
-  line-height:3.6rem;
-  position:absolute;
-  top:0;
-  -webkit-transition:all 0.3s;
-  -moz-transition:all 0.3s;
-  -o-transition:all 0.3s;
-  transition:all 0.3s;
-  width:3.6rem;
-  z-index:10}
+.icon-button i {
+    background: none;
+    color: white;
+    height: 3.6rem;
+    left: 0;
+    line-height: 3.6rem;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+    width: 3.6rem;
+    z-index: 10;
+}
 
-.icon-button .icon-twitter{
-  color:#4099ff}
+.icon-button .icon-twitter {
+    color: #4099ff;
+}
 
-.icon-button .icon-facebook{
-  color:#4286f4}
+.icon-button .icon-facebook {
+    color: #4286f4;
+}
 
-.icon-button .icon-github{
-  color:#000;}
+.icon-button .icon-github {
+    color: #000;
+}
 
-.icon-button .icon-linkedin{
-  color:#0077B5}
+.icon-button .icon-linkedin {
+    color: #0077B5;
+}
 
-.icon-button:hover .icon-twitter,.icon-button:hover .icon-facebook,.icon-button:hover .icon-github,.icon-button:hover .icon-linkedin{color:white}
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-github,
+.icon-button:hover .icon-linkedin {
+    color: white;
+}
 
-autocolor{
-  color:#595959;
+autocolor {
+    color: #595959;
 }
 
 lightonly {
-  visibility: visible;
+    visibility: visible;
 }
 
 darkonly {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 education {
     font-weight: 500;
     font-size: 115%;
-  }
+}
+
 papertitle {
     font-weight: 600;
     font-size: 100%;
-  }
-
-/* Dark mode removed for unified theme */
+}
 
 body {
-  background-color: #F9F8F4;
-  color: #1d1d1f;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #F9F8F4;
+    color: #1d1d1f;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Apple-style Card */
 .card {
-  background: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-  padding: 40px;
-  margin-bottom: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.02);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
 }
 
-  .image {
+.image {
     border-radius: 0.35em;
     border: 0;
     display: inline-block;
     position: relative;
-  }
+}
 
-    .image:before {
-      -moz-transition: opacity 0.2s ease-in-out;
-      -webkit-transition: opacity 0.2s ease-in-out;
-      -ms-transition: opacity 0.2s ease-in-out;
-      transition: opacity 0.2s ease-in-out;
-      border-radius: 0.35em;
-      content: '';
-      display: block;
-      height: 100%;
-      left: 0;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
+.image:before {
+    transition: opacity 0.2s ease-in-out;
+    border-radius: 0.35em;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
-    .image.avatar {
-      border-radius: 100%;
-    }
+.image.avatar {
+    border-radius: 100%;
+}
 
-      .image.avatar:before {
-        display: none;
-      }
+.image.avatar:before {
+    display: none;
+}
 
-      .image.avatar img {
-        border-radius: 100%;
-        width: 45%;
-        padding: 5px;
-        background: #fff;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        border: 1px solid rgba(0,0,0,0.05);
-        transition: transform 0.3s ease;
-      }
+.image.avatar img {
+    border-radius: 100%;
+    width: 45%;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
 
-      .image.avatar img:hover {
-        transform: scale(1.05);
-      }
+.image.avatar img:hover {
+    transform: scale(1.05);
+}
 
-    #header .image.avatar {
-      margin: 0 0 1em 0;
-      width: 8.00em;
-    }
+#header .image.avatar {
+    margin: 0 0 1em 0;
+    width: 8.00em;
+}
 
-h3, h4, h5, h6 {
-  font-weight: 600;
-  color:#8C0000;
-  margin:0 0 20px;
-  letter-spacing: -0.01em;
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: #8C0000;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
 }
 
 h1 {
-  font-weight: 700;
-  color:#8C0000;
-  margin:0 0 20px;
-  letter-spacing: -0.02em;
+    font-weight: 700;
+    color: #8C0000;
+    margin: 0 0 20px;
+    letter-spacing: -0.02em;
+    font-size: 28px;
+    line-height: 1.1;
 }
 
 h2 {
-  color:#8C0000;
-  font-weight: 600;
-  margin:2px 0px 20px;
-  font-size: 1.6rem;
-  letter-spacing: -0.015em;
+    color: #8C0000;
+    font-weight: 600;
+    margin: 2px 0px 20px;
+    font-size: 1.6rem;
+    letter-spacing: -0.015em;
+    line-height: 1.1;
 }
 
-/* Dark mode removed for unified theme */
-
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+p,
+ul,
+ol,
+table,
+pre,
+dl {
+    margin: 0 0 20px;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
-}
-
-h1 {
-  font-size:28px;
+h3 {
+    line-height: 1.1;
 }
 
 a {
-  color: #8C0000;
-  text-decoration: none;
-  transition: all 0.2s ease;
+    color: #8C0000;
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 a:hover {
-  color: #600000;
-  text-decoration: none;
-  opacity: 0.8;
+    color: #600000;
+    text-decoration: none;
+    opacity: 0.8;
 }
 
-/* Dark mode removed */
-
 a small {
-  font-size: 11px;
-  color: #86868b;
-  margin-top: -0.3em;
-  display: block;
+    font-size: 11px;
+    color: #86868b;
+    margin-top: -0.3em;
+    display: block;
 }
 
 a:hover small {
-  color: #86868b;
+    color: #86868b;
 }
 
 .wrapper {
-  width: 1000px;
-  margin: 0 auto;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
+    border-left: 1px solid #e5e5e5;
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-style: italic;
 }
 
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#333;
+code,
+pre {
+    font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+    color: #333;
 }
 
 pre {
-  max-width:500px;
-  padding:8px 15px;
-  background: #f8f8f8;
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
+    max-width: 500px;
+    padding: 8px 15px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    overflow-x: auto;
 }
 
 table {
-  width:100%;
-  border-collapse:collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
+th,
+td {
+    text-align: left;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 dt {
-  color:#444;
-  font-weight:500;
+    color: #444;
+    font-weight: 500;
 }
 
 th {
-  color:#444;
+    color: #444;
 }
-
-/* Dark mode removed */
 
 img {
-  max-width:100%;
+    max-width: 100%;
 }
 
+/* =========================================
+   Desktop Sidebar Header
+   ========================================= */
 header {
-  width: 260px;
-  float: left;
-  position: fixed;
-  -webkit-font-smoothing: subpixel-antialiased;
-  padding-top: 4.0em;
-  text-align: center;
-  z-index: 100;
+    width: 260px;
+    float: left;
+    position: fixed;
+    -webkit-font-smoothing: subpixel-antialiased;
+    padding-top: 4.0em;
+    text-align: center;
+    z-index: 100;
 }
 
 header ul {
-  list-style: none;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
-  width: 220px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  height: auto;
+    list-style: none;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+    width: 220px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: auto;
 }
 
 header li {
-  width: 100%;
-  float: none;
-  border-right: none;
-  height: auto;
-  padding: 0;
-  box-sizing: border-box;
+    width: 100%;
+    float: none;
+    border-right: none;
+    height: auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header ul a {
-  line-height: 44px;
-  font-size: 15px;
-  color: #000000;
-  display: block;
-  text-align: left;
-  padding: 0 24px;
-  height: 44px;
-  border-radius: 14px;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  font-weight: 600;
-  letter-spacing: -0.01em;
+    line-height: 44px;
+    font-size: 15px;
+    color: #000000;
+    display: block;
+    text-align: left;
+    padding: 0 24px;
+    height: 44px;
+    border-radius: 14px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 header ul a:hover {
-  color: #600000;
-  background-color: rgba(140, 0, 0, 0.06);
-  transform: scale(1.02);
+    color: #600000;
+    background-color: rgba(140, 0, 0, 0.06);
+    transform: scale(1.02);
 }
 
 header ul a:active {
-  background-color: rgba(140, 0, 0, 0.12);
-  transform: scale(0.98);
+    background-color: rgba(140, 0, 0, 0.12);
+    transform: scale(0.98);
 }
 
 section {
-  width: 700px;
-  float: right;
-  padding-top: 4.0em;
-  padding-bottom: 50px;
+    width: 700px;
+    float: right;
+    padding-top: 4.0em;
+    padding-bottom: 50px;
 }
 
 small {
-  font-size:11px;
+    font-size: 11px;
 }
 
 hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
+    border: 0;
+    background: #e5e5e5;
+    height: 1px;
+    margin: 0 0 20px;
 }
 
 footer {
-  width:232px;
-  float:left;
-  position:fixed;
-  bottom:30px;
-  -webkit-font-smoothing:subpixel-antialiased;
-  text-align:center;
-}
-
-@media print, screen and (max-width: 960px) {
-
-  .pub-row {
-  display: flex;
-  align-items: center;}
-
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-
-
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-
-  header {
-    padding-right: 0;
-    width: 100%;
+    width: 232px;
+    float: left;
+    position: fixed;
+    bottom: 30px;
+    -webkit-font-smoothing: subpixel-antialiased;
     text-align: center;
-  }
-
-  section {
-    border: none;
-    padding: 20px;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  header a small {
-    display:inline;
-  }
-
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
-
-
-   .image.avatar img {
-        border-radius: 100%;
-        width: 117px;
-        padding:20px;
-      }
-  #head1o2 {
-    visibility: hidden;
-  }
-
-  #head2o2 {
-    visibility: hidden;
-  }
-
-}
-
-@media print, screen and (max-width: 960px) {
-  body {
-    word-wrap:break-word;
-    padding:15px;
-  }
-
-  .pub-row {
-  display: flex;
-  align-items: center;}
-
-  header {
-    padding:0;
-  }
-
-  header ul, header p.view {
-
-  }
-
-  pre, code {
-    word-wrap:normal;
-  }
-}
-
-@media print, screen and (max-width: 480px) {
-
-  .pub-row {
-    display: block;
-    align-items: center;}
-
-  body {
-    padding:15px;
-  }
-
-  header ul {
-    width:99%;
-  }
-
-  header li, header ul li + li + li {
-    width:33%;
-  }
-
-  .image.avatar img {
-      border-radius: 100%;
-      width: 95px;
-      padding:20px;
-  }
-  #head1o2 {
-    visibility: hidden;
-  }
-
-  #head2o2 {
-    visibility: hidden;
-  }
-
-}
-
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
 }
 
 .biblink {
-  text-decoration:none;
-  display: inline;
-  margin-right: 0px;
+    text-decoration: none;
+    display: inline;
+    margin-right: 0px;
 }
 
 .fakelink {
-  text-decoration: none;
-  cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .bibref {
-  font-size: 70%;
-  margin-top: 10px;
-  margin-left: 0px;
-  display:none;
-  font-family: monospace;
+    font-size: 70%;
+    margin-top: 10px;
+    margin-left: 0px;
+    display: none;
+    font-family: monospace;
 }
 
 .publications .links a.btn {
@@ -627,22 +511,6 @@ footer {
     margin-right: 4px;
 }
 
-/* Dark mode removed */
-@media (prefers-color-scheme: dark) {
-    /*
-    .publications .links a.btn {
-        border: 1px solid #30363d;
-        color: #c9d1d9;
-    }
-
-    .publications .links a.btn:hover {
-        background-color: #30363d;
-        border-color: #8b949e;
-        color: #58a6ff;
-    }
-    */
-}
-
 #experience {
     margin-bottom: 20px;
 }
@@ -657,7 +525,6 @@ footer {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    /* 垂直居中对齐 */
 }
 
 .experience-logo {
@@ -668,50 +535,25 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 8px;
-    /* 轻微的圆角 */
     background-color: white;
-    /* 确保透明背景的logo可见 */
     padding: 2px;
-    /* 可选的内边距 */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    /* 添加细微阴影 */
 }
 
 .experience-details .title {
     font-size: 1.1rem;
-    /* 18px to rem */
     font-weight: bold;
-    /* color in light/dark mode is handled by existing rules */
 }
 
 .experience-details ul {
     list-style-type: none;
-    /* 移除默认的圆点 */
     padding-left: 0;
     margin: 5px 0 0;
 }
 
 .experience-details li {
     font-size: 0.95rem;
-    /* 14px to rem */
     color: #828282;
-}
-
-/* Dark mode removed */
-@media (prefers-color-scheme: dark) {
-    /*
-    .experience-details li {
-        color: #8b949e;
-    }
-
-    .experience-logo .logo-img {
-        background-color: #c9d1d9;
-    }
-    */
-}
-
-.social-icons a {
-    margin: 0 5px 0 0; // 从内联样式 style="..." 移到此处
 }
 
 #back-to-top {
@@ -724,8 +566,7 @@ footer {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    transition: background-color .3s,
-        opacity .5s, visibility .5s;
+    transition: background-color .3s, opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
@@ -750,14 +591,14 @@ footer {
     visibility: visible;
 }
 
-/* News Ticker Styles - Cleaned up */
+/* News Ticker Styles */
 .news-ticker-container {
     height: 150px;
     overflow-y: auto;
     border-radius: 12px;
     padding: 16px;
     background-color: #f5f5f7;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .news-ticker-container::-webkit-scrollbar {
@@ -769,14 +610,13 @@ footer {
 }
 
 .news-ticker-container::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
 /* Publication Card Hover Effect */
 .pub-row .abbr {
     overflow: hidden;
-    /* 确保放大的图片不会超出边界 */
     position: relative;
 }
 
@@ -786,10 +626,8 @@ footer {
 
 .pub-row:hover .abbr .teaser {
     transform: scale(1.1);
-    /* 鼠标悬停时图片放大10% */
 }
 
-/* 添加一个遮罩层 */
 .pub-row .abbr::after {
     content: 'View Details';
     font-family: 'Inter', sans-serif;
@@ -808,7 +646,6 @@ footer {
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
-    /* 确保遮罩层不影响点击 */
 }
 
 .pub-row:hover .abbr::after {
@@ -816,34 +653,415 @@ footer {
 }
 
 .filters {
-  margin-bottom: 30px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .filters .btn {
-  background: transparent;
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 50px;
-  padding: 8px 20px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #666;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: inherit;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
 }
 
 .filters .btn:hover {
-  background: rgba(0,0,0,0.03);
-  color: #333;
-  border-color: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.03);
+    color: #333;
+    border-color: rgba(0, 0, 0, 0.2);
 }
 
 .filters .btn.active {
-  background: #8C0000;
-  color: white;
-  border-color: #8C0000;
-  box-shadow: 0 4px 12px rgba(140, 0, 0, 0.2);
+    background: #8C0000;
+    color: white;
+    border-color: #8C0000;
+    box-shadow: 0 4px 12px rgba(140, 0, 0, 0.2);
+}
+
+@media print {
+    body {
+        padding: 0.4in;
+        font-size: 12pt;
+        color: #444;
+    }
+}
+
+/* =========================================
+   Mobile Design: Card Style Info + Fixed Burger
+   ========================================= */
+
+/* 默认在桌面端隐藏汉堡菜单按钮 */
+.mobile-menu-btn {
+    display: none !important;
+}
+
+@media print,
+screen and (max-width: 960px) {
+
+    /* 1. 全局布局修正 */
+    body {
+        background-color: #fafafa;
+        /* 移动端背景更浅，突出卡片 */
+    }
+
+    div.wrapper {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+        /* 防止宽度溢出 */
+    }
+
+    /* 重置 Header, Section, Footer 布局 */
+    header,
+    section,
+    footer {
+        float: none;
+        position: relative;
+        /* 恢复文档流 */
+        width: 100%;
+        box-sizing: border-box;
+        /* 关键：防止 padding 撑大宽度 */
+    }
+
+    /* 隐藏桌面端旧的悬浮元素 */
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+
+    /* =========================================
+     2. Header: 个人信息卡片 (美化版)
+     ========================================= */
+    header {
+        /* 卡片尺寸与定位 */
+        width: 92%;
+        /* 宽度占比 */
+        max-width: 400px;
+        /* 限制最大宽度 */
+        margin: 25px auto 20px;
+        /* 上边距(避开按钮) + 水平居中 + 下边距 */
+        padding: 40px 25px;
+        /* 内部呼吸感 */
+
+        /* 卡片视觉样式 */
+        background: #ffffff;
+        border-radius: 20px;
+        /* 现代感的大圆角 */
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+        /* 柔和的高级阴影 */
+        border: 1px solid rgba(0, 0, 0, 0.02);
+
+        /* 内容布局：强制居中 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        /* 覆盖桌面端可能存在的背景滤镜 */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    /* 2.1 头像美化 */
+    .image.avatar {
+        margin: 0 0 15px 0 !important;
+        /* 覆盖 ID 选择器权重 */
+        padding: 0;
+        border: none;
+        background: transparent;
+        width: auto !important;
+        /* 重置宽度 */
+    }
+
+    .image.avatar img {
+        width: 110px;
+        /* 适中的头像大小 */
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #fff;
+        /* 白边框 */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        /* 头像立体感 */
+    }
+
+    /* 2.2 名字美化 */
+    header h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #222;
+        margin: 5px 0 15px;
+        letter-spacing: -0.5px;
+        position: relative;
+        line-height: 1.2;
+    }
+
+    /* 名字下方的小装饰线 */
+    header h1::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #8C0000;
+        /* 主题色 */
+        margin: 10px auto 0;
+        /* 居中 */
+        border-radius: 2px;
+        opacity: 0.8;
+    }
+
+    /* 2.3 文字信息美化 */
+    header p,
+    header email,
+    header position,
+    header autocolor {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 5px;
+        display: block;
+        /* 确保换行显示 */
+    }
+
+    /* 强调邮箱或特定链接 */
+    header a {
+        color: #555;
+        text-decoration: none;
+        border-bottom: 1px dashed #ccc;
+    }
+
+    /* 2.4 社交图标美化 */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        /* 居中排列 */
+        gap: 15px;
+        /* 图标间距 */
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .social-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+        color: #8C0000 !important;
+        background: rgba(140, 0, 0, 0.06);
+        /* 浅色背景球 */
+        border-radius: 50%;
+        transition: all 0.2s;
+        margin: 0;
+        /* 重置 margin */
+    }
+
+    .social-icons a:hover {
+        background: #8C0000;
+        color: #fff !important;
+        transform: translateY(-2px);
+    }
+
+    /* =========================================
+     3. 汉堡菜单按钮 (固定在右上角)
+     ========================================= */
+    .mobile-menu-btn {
+        display: flex !important;
+        /* 强制显示 */
+        position: fixed;
+        /* 永远固定在屏幕可视区域 */
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+
+        width: 42px;
+        height: 42px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* 浮起效果 */
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .mobile-menu-btn:active {
+        transform: scale(0.95);
+    }
+
+    .mobile-menu-btn .bar {
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+        margin: 2px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+    }
+
+    /* 按钮变形动画 */
+    .mobile-menu-btn.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .mobile-menu-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* =========================================
+     4. 导航菜单 (弹出层)
+     ========================================= */
+    header ul {
+        position: fixed;
+        /* 也是 Fixed，独立于 Header 卡片 */
+        top: 75px;
+        /* 在按钮下方 */
+        right: 20px;
+        width: 180px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        padding: 10px 0;
+        z-index: 9998;
+
+        /* 默认隐藏状态 */
+        display: none;
+        flex-direction: column;
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+        transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        /* 移除旧样式影响 */
+        margin: 0;
+        border: none;
+        backdrop-filter: none;
+        /* 移除桌面端的毛玻璃 */
+        height: auto;
+    }
+
+    /* 展开状态 */
+    header.nav-open ul {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    header li {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        float: none;
+    }
+
+    header ul a {
+        display: block;
+        padding: 10px 20px;
+        color: #444;
+        font-size: 0.95rem;
+        font-weight: 500;
+        line-height: 1.5;
+        height: auto;
+        transition: background 0.2s;
+    }
+
+    header ul a:hover {
+        background: #f7f7f7;
+        color: #8C0000;
+        padding-left: 25px;
+        /* hover 时稍微右移 */
+        transform: none;
+        /* 禁用桌面端的放大效果 */
+    }
+
+    /* =========================================
+     5. 下方内容区域 (Card 风格一致性)
+     ========================================= */
+    section {
+        padding: 0 20px 20px;
+        /* 两侧留白 */
+        width: 100%;
+        max-width: 100%;
+        /* 防止溢出 */
+    }
+
+    /* 让内容卡片也像 Header 一样有些圆角和阴影 */
+    .card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.02);
+        margin-bottom: 20px;
+        padding: 25px !important;
+    }
+
+    /* 标题样式微调 */
+    section h1,
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+        /* 标题也居中对齐，保持一致 */
+    }
+
+    /* 列表垂直排列优化 */
+    .pub-row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pub-row .abbr {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .pub-row .abbr .teaser {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .pub-row .col-sm-9 {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    #head1o2,
+    #head2o2 {
+        display: none;
+    }
+}
+
+/* 针对小屏幕手机 (iPhone SE等) 的微调 */
+@media print,
+screen and (max-width: 380px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .mobile-menu-btn {
+        top: 15px;
+        right: 15px;
+    }
+
+    header ul {
+        top: 70px;
+        right: 15px;
+    }
 }

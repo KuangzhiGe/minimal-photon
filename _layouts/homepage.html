@@ -122,6 +122,12 @@
         </div>
         <br>
 
+        <div id="mobile-menu-btn" class="mobile-menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
         <ul>
             <li><a href="#about-me">About Me</a></li>
             <li><a href="#news">News</a></li>
@@ -130,6 +136,8 @@
         </ul>
 
         </header>
+
+
         <section>
         {{ content }}
         <br>
@@ -157,6 +165,31 @@
     <a id="back-to-top"></a>
     <script src="./assets/js/back-to-top.js"></script>
     <script src="./assets/js/pub-filter.js"></script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const header = document.querySelector('header');
+
+            // 点击按钮切换菜单状态
+            menuBtn.addEventListener('click', function () {
+                header.classList.toggle('nav-open');
+                menuBtn.classList.toggle('active');
+            });
+
+            // 点击导航链接后自动收起菜单
+            const navLinks = document.querySelectorAll('header ul a');
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    header.classList.remove('nav-open');
+                    menuBtn.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
