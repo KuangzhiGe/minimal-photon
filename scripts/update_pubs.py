@@ -1,8 +1,18 @@
 import re
 import os
+import yaml
 
 # Configuration
-MY_NAME = "Your Name" # Update this to your name to bold it in the author list
+def load_config():
+    try:
+        with open('_config.yml', 'r', encoding='utf-8') as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        print(f"Warning: Could not load _config.yml: {e}")
+        return {}
+
+config = load_config()
+MY_NAME = config.get('title', "Your Name")
 BIB_FILE = "_data/references.bib"
 YML_FILE = "_data/publications.yml"
 BIB_OUTPUT_DIR = "assets/bibs"

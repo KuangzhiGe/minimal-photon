@@ -84,6 +84,11 @@ You can use this template by hosting it on **GitHub Pages** (recommended) or run
     bundle install
     ```
 
+    If you plan to use the auto-update script for publications, install Python dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
 3.  **Run Server**
     Start the local server to preview your site:
     ```bash

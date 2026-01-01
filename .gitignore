@@ -1,7 +1,12 @@
 _site
 .sass-cache
+.jekyll-cache
+.jekyll-metadata
 Gemfile.lock
 *.gem
 .DS_Store
-.jekyll-cache
-git-update.sh
+node_modules
+.idea/
+.vscode/
+__pycache__/
+*.pyc

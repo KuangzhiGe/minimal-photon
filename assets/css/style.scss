@@ -1,4 +1,55 @@
 ---
 ---
 
-@import "minimal-light";
+@use "minimal-light";
+
+// Intro Page Styles
+#intro-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F9F8F4;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #8C0000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    transition: opacity 0.3s ease;
+
+    .intro-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #8C0000;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .intro-typewriter {
+        font-size: 24px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .intro-hint {
+        font-size: 1rem;
+        color: #8C0000;
+        margin-top: 40px;
+        opacity: 0.7;
+        animation: pulse 2s infinite;
+    }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+#main-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
